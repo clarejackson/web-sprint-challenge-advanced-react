@@ -30,13 +30,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+You will use React.Comonent and call a constructor function calling super, then use hooks to update state. The return will be invoked using the render function.
+
 2. Describe the different phases of the component lifecycle.
+
+There is Mounting, Updating and Unmounting. Mounting is the birth of the component. It is where state is first set. At the end  is where the function componentDidMount is called usually with an api call.  Updating continues to happen each time there is a change and then it moves all the way through componentDidUpdate each time. Unmounting is the death of the component, when all changes are complete and the app is no longer in use.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+There are three regularly used class component lifecycle methods, componentDidMount, componentDidUpdate and componentWillUnmount. As soon as React inserts the component into the DOM componentDidMount is called, usually with an api call, setting state post-render. Then, componentDidUpdate is next. It takes the arguments prevProps and prevState and is called immediately after the render is finished in each re-render cycle, or change. An if statement should always be used to make sure relevant state has changed or infinite loops may be created. Lastly, componentWillUnmount will perform the cleanup of any DOM elements that were created in the two methods above before the component’s death, or unmounting from the DOM.
+
 4. Define stateful logic.
 
+Stateful logic is what is utilized when using hooks. Hooks are stateful and reusable. The things we do with useState and useEffect are stateful logic as they are on a higher level than just basic component function.
+
 5. Describe how to test a React component with React Testing Library.
+
+The RTL is designed to be used to test the UI just as a user would. It should be able to test all of the stateful logic that may change as the user engages with the various inputs, buttons, etc. The developer must decide on the RTL matchers to grab the item being tested and then be as specific as possible with assertions to test the function. A good way to think about testing is trying to break the code to find the bugs to fix for every use case by a user.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
